@@ -14,6 +14,16 @@ and open the template in the editor.
             body{
                 background: black;
             }
+             .section {
+                background: transparent;
+                color: yellow;
+                border-radius: 1em;
+                padding: 1em;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, -50%) }
         </style>
         
     </head>
