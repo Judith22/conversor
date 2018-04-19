@@ -81,7 +81,7 @@ and open the template in the editor.
                     }
                     pila  = [];
                     console.log(listaSalida);
-                }
+                
                 
                 function esVariable(termino) {
                     var patt = new RegExp("[a-z]{1}");
