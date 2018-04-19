@@ -50,6 +50,22 @@ and open the template in the editor.
                         if (esVariable(termino)) {
                             listaSalida += termino + ' ';
                         } 
+                    // Caso cuando el termino es parentesis izquierdo
+                        if (termino === '(') {
+                            pila.push(termino);
+                            listaSalida += termino + ' ';
+                        }
+                        if (termino === ')') {
+                            while (pila.length > 0  && pila.length != '(' ) {
+                                pila.pop();
+                                listaSalida += termino + ' ';
+                                if (pila.length === '(') {
+                                    pila.pop();
+                                } else {
+                                    !error;
+                                }
+                                termino = [];                                
+                            }
     }
        
        
