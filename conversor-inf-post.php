@@ -100,7 +100,15 @@ and open the template in the editor.
                     }
                 }
 
-        }
+         </script>
+        </head>
+        <body>
+            <input type="text" id="expresion"/>
+        <button onclick="Convertir()">Convertir</button>
+
+        <p class="section" id="etiqueta"></p>
+    </body>
+</html>
        
        
        </script>   
