@@ -41,6 +41,11 @@ and open the template in the editor.
                         var termino = listaEntrada.pop();
                         
                     }
+                    // Caso cuando el termino es NÚMERO
+                        var numero = parseFloat(termino);
+                        if (!isNaN(numero)) {
+                            listaSalida += numero + ' ';
+                        }
                     // Caso cuando el termino es una VARIABLE
                         if (esVariable(termino)) {
                             listaSalida += termino + ' ';
