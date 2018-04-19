@@ -41,20 +41,24 @@ and open the template in the editor.
                         var termino = listaEntrada.pop();
                         
                     }
-                    // Caso cuando el termino es NÚMERO
+                    // Caso cuando el termino es NÚMERO.
                         var numero = parseFloat(termino);
                         if (!isNaN(numero)) {
                             listaSalida += numero + ' ';
                         }
-                    // Caso cuando el termino es una VARIABLE
+                    
+                    // Caso cuando el termino es una VARIABLE.
                         if (esVariable(termino)) {
                             listaSalida += termino + ' ';
                         } 
-                    // Caso cuando el termino es parentesis izquierdo
+                    
+                    // Caso cuando el termino es parentesis izquierdo.
                         if (termino === '(') {
                             pila.push(termino);
                             listaSalida += termino + ' ';
                         }
+                    
+                    // Caso cuando el termino es parentesis derecho.
                         if (termino === ')') {
                             while (pila.length > 0  && pila.length != '(' ) {
                                 pila.pop();
@@ -67,18 +71,23 @@ and open the template in the editor.
                                 termino = [];                                
                             }
                         }
+                    
+                    //Caso cuando el termino es Operando.
                         if (esOperador(termino)) {
                            while (pila.length > 0) {
                                 pila.pop();
                                 listaSalida += termino + ' ';
                             }
+                            
                             pila.push(termino);
                         }
                     }
+             
                     while (pila.length > 0) {
                         pila.pop();
                         listaSalida += listaSalida + ' ';
                     }
+             
                     pila  = [];
                     console.log(listaSalida);
                 
@@ -87,6 +96,8 @@ and open the template in the editor.
                     var patt = new RegExp("[a-z]{1}");
                     return patt.test(termino);
                 }
+             
+             
                 function esOperador(termino) {
                     switch (termino) {
                         case '+':
