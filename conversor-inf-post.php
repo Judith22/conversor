@@ -66,7 +66,24 @@ and open the template in the editor.
                                 }
                                 termino = [];                                
                             }
-    }
+                        }
+                        if (esOperador(termino)) {
+                           while (pila.length > 0) {
+                                pila.pop();
+                                listaSalida += termino + ' ';
+                            }
+                            pila.push(termino);
+                        }
+                    }
+                    while (pila.length > 0) {
+                        pila.pop();
+                        listaSalida += listaSalida + ' ';
+                    }
+                    pila  = [];
+                    console.log(listaSalida);
+                }
+
+        }
        
        
        </script>   
