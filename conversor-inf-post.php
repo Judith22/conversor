@@ -26,5 +26,27 @@ and open the template in the editor.
                 transform: translate(-50%, -50%) }
         </style>
         
+        
+         <script lang="">
+             
+                function Convertir() {
+                    
+                    var expresion = document.getElementById('expresion');
+                    var listaEntrada = expresion.value.toString().split(' ').reverse();
+                    var pila = new Array();
+                    var listaSalida = '';
+                    
+                    var error = true;
+                    while (!error && listaEntrada.length > 0) {
+                        var termino = listaEntrada.pop();
+                        
+                    }
+                    
+    }
+       
+       
+       </script>   
+       
     </head>
+    
 </html>
